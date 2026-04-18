@@ -6,14 +6,14 @@ export class ViewArticlePage {
     this.userId = userId;
     this.articleTitleHeader = page.getByRole('heading');
     this.editArticleButton = page.
-      getByRole('link', { name: ' Edit Article' }).first();
+      getByRole('link', { name: 'Edit Article' }).first();
     this.followButton = page.
       getByRole('button', { name: 'Follow' }).first();
     this.homePageButton = page.getByRole('link', { name: 'Home' });
   }
 
   authorLinkInArticleHeader(username) {
-    return this.page.getByRole('link', { username }).first();
+    return this.page.getByRole('link', { name: username }).first();
   }
 
   tagListItem(tagName) {
